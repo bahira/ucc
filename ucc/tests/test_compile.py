@@ -164,6 +164,51 @@ def test_custom_pass():
         analysis_pass.run(dag)
         assert analysis_pass.property_set["check_map"]
 
+def test_bqskit_compile():
+    from ucc.transpilers.ucc_bqskit import BQSKitTransformationPass
+
+    bqskit_pass = BQSKitTransformationPass()
+    qasm = """
+        OPENQASM 2.0;
+        include "qelib1.inc";
+        qreg q[3];
+        h q[0];
+        cp(1.5707963267948966) q[1], q[0];
+        h q[1];
+        cp(0.7853981633974483) q[2], q[0];
+        cp(1.5707963267948966) q[2], q[1];
+        h q[2];
+        swap q[0], q[2];
+        h q[0];
+        cp(-1.5707963267948966) q[1], q[0];
+        h q[1];
+        cp(-0.7853981633974483) q[2], q[0];
+        cp(-1.5707963267948966) q[2], q[1];
+        h q[2];
+        swap q[0], q[2];
+        """
+    # This qasm describes a 3-qubit QFT followed by a 3-qubit inverse QFT.
+    # This circuit resolves to the identity, but that's not obvious to
+    # most synthesis tools.
+    # BQSKit using LEAP will usually remove all 2-qubit gates
+    # from the circuit, leaving 3 u3 gates that don't do anything
+    # because it just focuses on the 2-qubit gates. A further
+    # post processing step would remove these 1-qubit gates, but in
+    # more realistic use cases, its often not worth the extra processing.
+
+    def get_post_cx_count(circuit, custom_passes=[]):
+        post_compiler_circuit = compile(qasm, custom_passes=custom_passes)
+        analysis_pass = CountOps()
+        dag = circuit_to_dag(
+            QiskitCircuit.from_qasm_str(post_compiler_circuit)
+        )
+        analysis_pass.run(dag)
+        if "cx" in analysis_pass.property_set["count_ops"]:
+            return analysis_pass.property_set["count_ops"]["cx"]
+        else:
+            return 0
+
+    assert get_post_cx_count(qasm, [bqskit_pass]) < get_post_cx_count(qasm)
 
 @pytest.mark.parametrize("N", [5, 8, 10, 11])
 def test_compile_with_mps_pass(N):
