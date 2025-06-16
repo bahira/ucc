@@ -155,6 +155,72 @@ Alternatively, we can add our custom pass, as shown in the following example.
       circuit_to_compile, custom_passes=[MyCustomPass()]
    )
 
+An Example of a Custom Pass: BQSKitTransformationPass
+=====================================================
+
+The ``BQSKitTransformationPass`` is a custom pass provided in ``ucc.transpilers.ucc_bqskit``. It uses `BQSKit <https://github.com/BQSKit/bqskit>`_ to optimize the circuit. BQSKit is slower than Qiskit, but can find optimizations where Qiskit cannot, especially in circuits with lots of small-angle single-qubit gates interspersed among multi-qubit gates such that optimization techniques that apply a fixed set of known identities will not perform well.
+
+In general, if you wouldn't mind a slower runtime in exchange for finding a shorter circuit, you may find it helpful to include the ``BQSKitTransformationPass`` in your workflow.
+
+
+Before you can use ``BQSKitTransformationPass``, you must install BQSKit:
+
+.. code:: bash
+
+   pip install bqskit
+
+Here is an example of how to use the ``BQSKitTransformationPass``:
+
+..
+   This testsetup is associated with subsequent blocks that also have the bqskit group.
+   This setup is run, followed by all the blocks with this group in order and
+   ensures the "circuit_to_compile" variable is defined.
+
+.. testsetup:: bqskit
+
+   from qiskit import QuantumCircuit as QiskitCircuit
+   from ucc import compile
+   qasm = """
+        OPENQASM 2.0;
+        include "qelib1.inc";
+        qreg q[3];
+        h q[0];
+        cp(1.5707963267948966) q[1], q[0];
+        h q[1];
+        cp(0.7853981633974483) q[2], q[0];
+        cp(1.5707963267948966) q[2], q[1];
+        h q[2];
+        swap q[0], q[2];
+        """
+   circuit_to_compile = QiskitCircuit.from_qasm_str(qasm)
+
+.. testcode:: bqskit
+
+   from ucc.transpilers.ucc_bqskit import BQSKitTransformationPass
+   result = compile(circuit_to_compile, custom_passes=[BQSKitTransformationPass()])
+
+Instead of relying on the provided default set of BQSKit passes, you can specify your own BQSKit workflow.
+
+.. testcode:: bqskit
+
+   from ucc.transpilers.ucc_bqskit import BQSKitTransformationPass
+   from bqskit.passes import QuickPartitioner, ForEachBlockPass, LEAPSynthesisPass, TreeScanningGateRemovalPass, UnfoldPass
+   bqskit_pass_list = [
+       QuickPartitioner(3),
+       ForEachBlockPass([
+           LEAPSynthesisPass(),
+           TreeScanningGateRemovalPass(),
+           ], replace_filter="less-than-multi"),
+       UnfoldPass(),
+       ]
+   bqskit_pass = BQSKitTransformationPass(bqskit_passes=bqskit_pass_list)
+   result = compile(circuit_to_compile, custom_passes=[bqskit_pass])
+
+
+
+The ``BQSKitTransformationPass`` is just one example of the extensibility of UCC. If you would like to port a compile pass from another framework, please create a `proposal <https://github.com/unitaryfoundation/ucc/discussions/new?category=new-compiler-pass>`_ and be ready to benchmark its performance relative to ``UCCDefault1``.
+
+
 An example of a custom pass: Approximate Quantum Compilation via MPS encoding
 =============================================================================
 The ``MPSEncoder`` is a custom pass provided in ``ucc.aqc``. Users can opt for `qmprs <https://github.com/Qualition/qmprs>`_ for a more advanced implementation of the same pass.

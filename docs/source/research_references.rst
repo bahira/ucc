@@ -11,4 +11,3 @@ If you are interested in using UCC for your research, please check out the `user
   UCC-CCMap achieved up to **17.8% higher fidelity** and **significant reductions in compilation cost** compared to UCC alone.
 
 .. bibliography::
-
