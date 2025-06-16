@@ -8,7 +8,9 @@ try:
         UnfoldPass,
     )
 except ImportError:
-    raise ImportError("bqskit is required to use BQSKitTransformationPass but is not a dependency for ucc, so it is not installed by default. You can install it from pypi e.g. 'pip install bqskit' or 'uv add bqskit'.")
+    raise ImportError(
+        "bqskit is required to use BQSKitTransformationPass but is not a dependency for ucc, so it is not installed by default. You can install it from pypi e.g. 'pip install bqskit' or 'uv add bqskit'."
+    )
 
 import qiskit.transpiler.basepasses
 import qiskit.converters

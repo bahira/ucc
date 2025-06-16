@@ -7,7 +7,7 @@ from qiskit import QuantumCircuit as QiskitCircuit
 from qiskit import transpile as qiskit_transpile
 from qiskit.converters import circuit_to_dag
 from qiskit.quantum_info import Statevector
-from qiskit.transpiler.passes import GatesInBasis
+from qiskit.transpiler.passes import GatesInBasis, CountOps
 from qiskit.transpiler.passes.utils import CheckMap
 from qiskit.transpiler.basepasses import TransformationPass
 from qiskit.circuit.library import HGate, XGate
@@ -164,6 +164,7 @@ def test_custom_pass():
         analysis_pass.run(dag)
         assert analysis_pass.property_set["check_map"]
 
+
 def test_bqskit_compile():
     from ucc.transpilers.ucc_bqskit import BQSKitTransformationPass
 
@@ -209,6 +210,7 @@ def test_bqskit_compile():
             return 0
 
     assert get_post_cx_count(qasm, [bqskit_pass]) < get_post_cx_count(qasm)
+
 
 @pytest.mark.parametrize("N", [5, 8, 10, 11])
 def test_compile_with_mps_pass(N):
