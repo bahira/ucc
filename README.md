@@ -18,6 +18,7 @@ By leveraging [qBraid](https://github.com/qBraid/qBraid), UCC interfaces automat
 
 **Want to know more?**
 - Check out our [documentation](https://ucc.readthedocs.io/en/latest/), which you can build locally after installation by running `make html` in `ucc/docs/source`.
+- Watch our [introductory video](https://www.youtube.com/watch?v=11uQynyOUI8) about UCC presented at [FOSDEM 2025](https://fosdem.org/2025/) by [@natestamen](https://github.com/natestemen/).
 - Read the [launch announcement](https://unitary.foundation/posts/2025_ucc_launch_blog) to learn more on the current state of UCC, its capabilities and future direction.
 - For code, repo, or theory questions, especially those requiring more detailed responses, submit a [Discussion](https://github.com/unitaryfoundation/ucc/discussions).
 - For casual or time sensitive questions, chat with us on [Discord](http://discord.unitary.foundation).
