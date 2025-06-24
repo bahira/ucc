@@ -29,6 +29,12 @@ jobs:
       - name: Install the project
         run: uv sync --all-extras --all-groups
 
+      - name: Install pre-commit
+        run: uv pip install pre-commit
+
+      - name: Run pre-commit hooks
+        run: uv run pre-commit run --all-files
+
       - name: Run tests
         run: uv run pytest
 
