@@ -8,10 +8,6 @@
 [![Documentation Status](https://readthedocs.org/projects/ucc/badge/?version=latest)](https://ucc.readthedocs.io/en/latest/?badge=latest)
 [![Discord Chat](https://img.shields.io/badge/dynamic/json?color=blue&label=Discord&query=approximate_presence_count&suffix=%20online.&url=https%3A%2F%2Fdiscord.com%2Fapi%2Finvites%2FJqVGmpkP96%3Fwith_counts%3Dtrue)](http://discord.unitary.foundation)
 
-<!-- start-changelog-link-to-remove-for-docs -->
-**[See the changelog](./CHANGELOG.md)**
-<!-- end-changelog-link-to-remove-for-docs -->
-
 The **Unitary Compiler Collection (UCC)** is a Python library for frontend-agnostic, high performance compilation of quantum circuits. UCC's goal is to gather together the best of open source compilation to make quantum programming simpler, faster, and more scalable.
 
 By leveraging [qBraid](https://github.com/qBraid/qBraid), UCC interfaces automatically with multiple quantum computing frameworks, including [Qiskit](https://github.com/Qiskit/qiskit), [Cirq](https://github.com/quantumlib/Cirq), and [PyTKET](https://github.com/CQCL/tket) and supports programs in OpenQASM 2 and [OpenQASM 3](https://openqasm.com/). For a full list of the latest supported interfaces, just call `ucc.supported_circuit_formats`.
@@ -23,6 +19,10 @@ By leveraging [qBraid](https://github.com/qBraid/qBraid), UCC interfaces automat
 - Read the [launch announcement](https://unitary.foundation/posts/2025_ucc_launch_blog) to learn more on the current state of UCC, its capabilities and future direction.
 - For code, repo, or theory questions, especially those requiring more detailed responses, submit a [Discussion](https://github.com/unitaryfoundation/ucc/discussions).
 - For casual or time sensitive questions, chat with us on [Discord](http://discord.unitary.foundation).
+<!-- start-changelog-link-to-remove-for-docs -->
+- See the [changelog](./CHANGELOG.md) for the latest updates and release notes.
+<!-- end-changelog-link-to-remove-for-docs -->
+- Explore [research publications](https://ucc.readthedocs.io/en/latest/research_references.html) that utilize UCC.
 
 ## Quickstart
 
@@ -113,3 +113,13 @@ If you have questions about contributing please ask on the [Unitary Foundation D
 
 UCC is distributed under [GNU Affero General Public License version 3.0](https://www.gnu.org/licenses/agpl-3.0.en.html)(AGPLv3).
 Parts of ucc contain code or modified code that is part of [Qiskit](https://github.com/Qiskit/qiskit) or [Qiskit Benchpress](https://github.com/Qiskit/benchpress), which are distributed under the Apache 2.0 license.
+
+## Contributors ✨
+
+Thank you to all of the [wonderful people](https://github.com/unitaryfoundation/ucc/graphs/contributors) that have made this project possible.
+Non-code contributors are also much appreciated, and are listed here.
+Thank you to:
+
+- [@francespoblete](https://github.com/francespoblete) for designing the UCC logo.
+
+Contributions of any kind are welcome!
