@@ -2,20 +2,20 @@
 name: New compiler pass
 about: Suggest a new compilation pass to integrate into UCC
 title: "[NEW PASS]"
-labels: feature, transpiler_pass
+labels: feature, compiler_pass
 assignees: ''
 
 ---
-## New Compiler Pass idea
-_This is the template to use if you'd like to share an idea for a new quantum compiler pass to go into UCC._
+<!-- _This is the template to use if you'd like to share an idea for a new quantum compiler pass to go into UCC._ -->
 
 ### Short description
-Include the name of the compiler pass and a brief summary of what it does. If your compiler pass is from a paper, you can paste the abstract.
+**Technique name:**
 
-#### Source of the technique
-Provide links to the following, as applicable. If it's just an idea from your head, feel free to say that :)
+<!-- Describe the basic functioning of you compiler pass porposal. If your compiler pass is from a paper, you can paste the abstract here -->
 
-Paper title:
+#### Source of technique
+<!-- Provide links to the following, as applicable. If it's just an idea from your head, feel free to say that :) -->
+Scientific/white-paper:  
 Code repository:
 
 ---
