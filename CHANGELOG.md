@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.4.8] - 2025-07-27
+## [0.4.8] - 2025-07-17
 [PyPI](https://pypi.org/project/ucc/0.4.8/) | [GitHub](https://github.com/unitaryfoundation/ucc/releases/tag/v0.4.8)
 
 In v0.4.8, we've made documentation and workflow improvements based on feedback from [UnitaryHACK](https://unitaryhack.dev/) 2025.
