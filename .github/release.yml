@@ -2,12 +2,16 @@
 
 changelog:
   categories:
-    - title: 🏕 Features
+    - title: ✨ Key Features
       labels:
         - '*'
       exclude:
         labels:
           - dependencies
-    - title: 👒 Dependencies
+          - documentation
+    - title: 📚 Documentation & Workflow Improvements
+      labels:
+        - documentation
+    - title: 🔄 Dependencies
       labels:
         - dependencies

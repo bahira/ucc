@@ -1,34 +1,57 @@
 # Changelog
 
+## [0.4.8] - 2025-07-27
+[PyPI](https://pypi.org/project/ucc/0.4.8/) | [GitHub](https://github.com/unitaryfoundation/ucc/releases/tag/v0.4.8)
+
+In v0.4.8, we've made documentation and workflow improvements based on feedback from [UnitaryHACK](https://unitaryhack.dev/) 2025.
+### 📚 Documentation & Workflow Improvements
+* Add intro video about UCC by @WingCode in https://github.com/unitaryfoundation/ucc/pull/431
+* Add license badge to README by @jordandsullivan in https://github.com/unitaryfoundation/ucc/pull/438
+* Add ucc logo by @jordandsullivan in https://github.com/unitaryfoundation/ucc/pull/439
+* Ensure all pre-commit hook are validated in CI by @bachase in https://github.com/unitaryfoundation/ucc/pull/442
+* README updates by @bachase in https://github.com/unitaryfoundation/ucc/pull/443
+* Update release instructions to use automated Release tagging by @jordandsullivan in https://github.com/unitaryfoundation/ucc/pull/447
+### 🔄  Dependencies
+By @dependabot
+* quimb (1.11.0 → 1.11.1) via  https://github.com/unitaryfoundation/ucc/pull/441
+* qiskit (2.0.2 → 2.1.1) via https://github.com/unitaryfoundation/ucc/pull/440 + https://github.com/unitaryfoundation/ucc/pull/450
+* pytket (2.6.0 → 2.7.0) via https://github.com/unitaryfoundation/ucc/pull/449
+
+## New Contributors
+* @WingCode made their first contribution in https://github.com/unitaryfoundation/ucc/pull/431
+
+**Full Changelog**: https://github.com/unitaryfoundation/ucc/compare/v0.4.7...v0.4.8
+
+
 ## [0.4.7] - 2025-06-17
 [PyPI](https://pypi.org/project/ucc/0.4.7/) | [GitHub](https://github.com/unitaryfoundation/ucc/releases/tag/v0.4.7)
 
 In v0.4.7, we are celebrating a triumphant [UnitaryHACK](https://unitaryhack.dev/) 2025, with exciting new contributions from lovely new contributors -- and a whole slew of updates and improvements by the maintainers to support their work!
 
 ### ✨ Key Features
-First external compiler pass port by new contributor @WolfLink 🔮: Integrated a gate-reducing pass from [BQSKit](https://github.com/BQSKit/bqskit) (#412).  
+First external compiler pass port by new contributor @WolfLink 🔮: Integrated a gate-reducing pass from [BQSKit](https://github.com/BQSKit/bqskit) (#412).
 New approximate compilation module by new contributor @ACE07-Sev 🎯 : Added MPS encoding support for circuit optimization (#421).
 
 ### 📚 Documentation & Workflow Improvements
-Enhanced compiler customization docs (#391 by @Misty-W)  
-Added call-outs for reasearch using UCC (#405 @bachase)  
-Simplified New Compiler Pass proposal issue template (#373 by @jordandsullivan)  
-Migrated in-depth Compiler Pass proposal to Discussions (#372 + #378 by @jordandsullivan)  
-Added support for benchmarking automation on fork PRs (#402 by @bachase)  
-Added CHANGELOG to docs (#389 by @bachase)  
-Update `ucc.compile` docstring (#399 by @Misty-W)  
+Enhanced compiler customization docs (#391 by @Misty-W)
+Added call-outs for reasearch using UCC (#405 @bachase)
+Simplified New Compiler Pass proposal issue template (#373 by @jordandsullivan)
+Migrated in-depth Compiler Pass proposal to Discussions (#372 + #378 by @jordandsullivan)
+Added support for benchmarking automation on fork PRs (#402 by @bachase)
+Added CHANGELOG to docs (#389 by @bachase)
+Update `ucc.compile` docstring (#399 by @Misty-W)
 
-### 🔄 Dependency Updates 
+### 🔄 Dependency Updates
 By @dependabot...
-qiskit (2.0.0 → 2.0.2) via [#363](https://github.com/unitaryfoundation/ucc/pull/363) + [#397](https://github.com/unitaryfoundation/ucc/pull/397)  
-pytket (2.4.1 → 2.6.0) via [#398](https://github.com/unitaryfoundation/ucc/pull/398) + [#409](https://github.com/unitaryfoundation/ucc/pull/409)  
-qiskit-qasm3-import (0.5.1 → 0.6.0) in [#424](https://github.com/unitaryfoundation/ucc/pull/424)  
-quimb (1.10.0 → 1.11.0) in [#425](https://github.com/unitaryfoundation/ucc/pull/425)  
-qbraid (0.9.5 → 0.9.7) in [#426](https://github.com/unitaryfoundation/ucc/pull/426)  
+qiskit (2.0.0 → 2.0.2) via [#363](https://github.com/unitaryfoundation/ucc/pull/363) + [#397](https://github.com/unitaryfoundation/ucc/pull/397)
+pytket (2.4.1 → 2.6.0) via [#398](https://github.com/unitaryfoundation/ucc/pull/398) + [#409](https://github.com/unitaryfoundation/ucc/pull/409)
+qiskit-qasm3-import (0.5.1 → 0.6.0) in [#424](https://github.com/unitaryfoundation/ucc/pull/424)
+quimb (1.10.0 → 1.11.0) in [#425](https://github.com/unitaryfoundation/ucc/pull/425)
+qbraid (0.9.5 → 0.9.7) in [#426](https://github.com/unitaryfoundation/ucc/pull/426)
 
 
 ### 👏 Community Spotlight
-Huge thanks to all Unitary Hack 2025 participants and our new contributors! 
+Huge thanks to all Unitary Hack 2025 participants and our new contributors!
 * @ACE07-Sev made their first contribution in [#421](https://github.com/unitaryfoundation/ucc/pull/421)
 * @WolfLink made their first contribution in [#412](https://github.com/unitaryfoundation/ucc/pull/412)
 * @WingCode investigated methods of logical equivalence verification on large circuits in [#62](https://github.com/unitaryfoundation/ucc/issues/62)
