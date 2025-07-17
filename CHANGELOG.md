@@ -17,9 +17,6 @@ By @dependabot
 * qiskit (2.0.2 → 2.1.1) via https://github.com/unitaryfoundation/ucc/pull/440 + https://github.com/unitaryfoundation/ucc/pull/450
 * pytket (2.6.0 → 2.7.0) via https://github.com/unitaryfoundation/ucc/pull/449
 
-## New Contributors
-* @WingCode made their first contribution in https://github.com/unitaryfoundation/ucc/pull/431
-
 **Full Changelog**: https://github.com/unitaryfoundation/ucc/compare/v0.4.7...v0.4.8
 
 
