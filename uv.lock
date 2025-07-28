@@ -139,7 +139,7 @@ wheels = [
 
 [[package]]
 name = "cirq-core"
-version = "1.5.0"
+version = "1.6.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "attrs" },
@@ -155,7 +155,7 @@ dependencies = [
     { name = "typing-extensions" },
 ]
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/15/1e/ce461c2c75a029c47c10e0f2f95e0a694cedd4f2888b70b8e3fbcf806972/cirq_core-1.5.0-py3-none-any.whl", hash = "sha256:104a574c766011c979e897f0fb5e90eb69a2b58ec1dc389a73495e63124923d0", size = 1969788, upload-time = "2025-04-10T18:05:57.196Z" },
+    { url = "https://files.pythonhosted.org/packages/8b/bf/3a068a61c4a2d71b64cf1dda7aa8211dc91a23c84b7cf9c4439f3baea78a/cirq_core-1.6.0-py3-none-any.whl", hash = "sha256:0a5d5a53c8e4d82b0afcf59ebb47956b0df2c714f15ee1e1d36bccf7f33cc734", size = 2017366, upload-time = "2025-07-23T04:03:30.436Z" },
 ]
 
 [[package]]
