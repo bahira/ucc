@@ -124,3 +124,6 @@ Thank you to:
 - [@francespoblete](https://github.com/francespoblete) for designing the UCC logo.
 
 Contributions of any kind are welcome!
+
+<!-- ## Coming soon -->
+<!-- Did you know you can get paid for your contributions to this repo? Soon you'll be able to earn compensation through Merit systems.  -->
