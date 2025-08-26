@@ -1,4 +1,33 @@
 # Changelog
+<!-- Release notes generated using configuration in .github/release.yml at main -->
+
+## [0.4.9] - 2025-08-26
+[PyPI](https://pypi.org/project/ucc/0.4.9/) | [GitHub](https://github.com/unitaryfoundation/ucc/releases/tag/v0.4.9)
+In version 0.4.9, we optimized the logic for target gateset selection, made infrastructure and documentation updates and upgraded dependencies.
+
+### ✨ Key Features
+* Fix links to research references in docs by @jordandsullivan in https://github.com/unitaryfoundation/ucc/pull/455
+* Add codecov reporting by @bachase in https://github.com/unitaryfoundation/ucc/pull/465
+* add codecov badge to readme by @jordandsullivan in https://github.com/unitaryfoundation/ucc/pull/467
+* Test for Merit systems automation by @jordandsullivan in https://github.com/unitaryfoundation/ucc/pull/470
+* Simplified and optimized logic for target gateset selection.  by @jordandsullivan in https://github.com/unitaryfoundation/ucc/pull/492
+### 🔄 Dependencies
+By @dependabot  
+* pytket (2.7.0 → 2.9.1) via [#456](https://github.com/unitaryfoundation/ucc/pull/456) + [#458](https://github.com/unitaryfoundation/ucc/pull/458)  
+* qbraid (0.9.7 → 0.9.8) via [#459](https://github.com/unitaryfoundation/ucc/pull/459)  
+* cirq-core (1.5.0 → 1.6.1) via [#457](https://github.com/unitaryfoundation/ucc/pull/457) + [#487](https://github.com/unitaryfoundation/ucc/pull/487)  
+* sphinxcontrib-bibtex (2.6.3 → 2.6.5) via [#472](https://github.com/unitaryfoundation/ucc/pull/472)  
+* pytest (8.3.5 → 8.4.1) via [#473](https://github.com/unitaryfoundation/ucc/pull/473)  
+* pytest-cov (6.1.1 → 6.2.1) via [#474](https://github.com/unitaryfoundation/ucc/pull/474)  
+* quimb (1.11.1 → 1.11.2) via [#475](https://github.com/unitaryfoundation/ucc/pull/475)  
+* ruff (0.11.7 → 0.12.10) via [#476](https://github.com/unitaryfoundation/ucc/pull/476) + [#483](https://github.com/unitaryfoundation/ucc/pull/483) + [#486](https://github.com/unitaryfoundation/ucc/pull/486) + [#494](https://github.com/unitaryfoundation/ucc/pull/494)  
+* actions/checkout (4 → 5) via [#481](https://github.com/unitaryfoundation/ucc/pull/481)  
+* actions/download-artifact (4 → 5) via [#482](https://github.com/unitaryfoundation/ucc/pull/482)  
+* pre-commit (4.2.0 → 4.3.0) via [#484](https://github.com/unitaryfoundation/ucc/pull/484)  
+* qiskit (2.1.1 → 2.1.2) via [#493](https://github.com/unitaryfoundation/ucc/pull/493)  
+
+
+**Full Changelog**: https://github.com/unitaryfoundation/ucc/compare/v0.4.8...0.4.9
 
 ## [0.4.8] - 2025-07-17
 [PyPI](https://pypi.org/project/ucc/0.4.8/) | [GitHub](https://github.com/unitaryfoundation/ucc/releases/tag/v0.4.8)
