@@ -11,10 +11,13 @@
 
 The **Unitary Compiler Collection (UCC)** is a Python library for frontend-agnostic, high performance compilation of quantum circuits. UCC's goal is to gather together the best of open source compilation to make quantum programming simpler, faster, and more scalable.
 
-By leveraging [qBraid](https://github.com/qBraid/qBraid), UCC interfaces automatically with multiple quantum computing frameworks, including [Qiskit](https://github.com/Qiskit/qiskit), [Cirq](https://github.com/quantumlib/Cirq), and [PyTKET](https://github.com/CQCL/tket) and supports programs in OpenQASM 2 and [OpenQASM 3](https://openqasm.com/). For a full list of the latest supported interfaces, just call `ucc.supported_circuit_formats`.
+By leveraging [qBraid](https://github.com/qBraid/qBraid), UCC interfaces automatically with multiple quantum computing frameworks, including [Qiskit](https://github.com/Qiskit/qiskit), [Cirq](https://github.com/quantumlib/Cirq), and [PyTKET](https://github.com/CQCL/tket) and supports programs in OpenQASM 2 and [OpenQASM 3](https://openqasm.com/). For the full list, just call `ucc.supported_circuit_formats`.
 
+_We use the [Merit Terminal](https://terminal.merit.systems/unitaryfoundation/ucc/) to pay contributors who implement new compiler passes in our repo!  
+Check out our [open issues tagged with #merit-bounty](https://github.com/unitaryfoundation/ucc/issues?q=is%3Aissue%20state%3Aopen%20label%3Amerit-bounty) to see which are eligible for compensation._
 
-**Want to know more?**
+### Want to know more?
+
 - Check out our [documentation](https://ucc.readthedocs.io/en/latest/), which you can build locally after installation by running `make html` in `ucc/docs/source`.
 - Watch our [introductory video](https://www.youtube.com/watch?v=11uQynyOUI8) on UCC presented at [FOSDEM 2025](https://fosdem.org/2025/) by [@natestemen](https://github.com/natestemen/).
 - Read the [launch announcement](https://unitary.foundation/posts/2025_ucc_launch_blog) to learn more on the current state of UCC, its capabilities and future direction.
@@ -104,7 +107,8 @@ We’re building UCC as a community-driven project.
 Your contributions help improve the tool for everyone!
 There are many ways you can contribute, such as
 
-- **Create a Custom Compiler Pass**: Learn how in the [User Guide](https://ucc.readthedocs.io/en/latest/user_guide.html)
+- 💸 **Create a Custom Compiler Pass**:💸 Learn how in the [User Guide](https://ucc.readthedocs.io/en/latest/user_guide.html). 
+ Eligible for compensation through the [Merit Terminal](https://terminal.merit.systems/unitaryfoundation/ucc/)! 
 - **Submit a bug report or feature request**: Submit a bug report or feature request [on GitHub](https://github.com/unitaryfoundation/ucc/issues/new/choose).
 - **Contribute Code**: Follow the [Contribution Guide](https://ucc.readthedocs.io/en/latest/contributing.html) to submit new passes and improvements.
 
@@ -124,6 +128,3 @@ Thank you to:
 - [@francespoblete](https://github.com/francespoblete) for designing the UCC logo.
 
 Contributions of any kind are welcome!
-
-<!-- ## Coming soon -->
-<!-- Did you know you can get paid for your contributions to this repo? Soon you'll be able to earn compensation through Merit systems.  -->
