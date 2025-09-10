@@ -43,8 +43,8 @@ def compile(
             Defaults to the format of the input circuit.
         target_gateset (set[str]): (optional) The gateset to compile the circuit to.
             e.g. {"cx", "rx",...}. Defaults to the gate set of the target device if available. If no `target_gateset` or ` target_device` is provided, defaults to `{"cx", "rz", "rx", "ry", "h"}`.
-        target_device (qiskit.transpiler.Target): (optional)
-            The target device  to compile the circuit for. Can be specified as a Qiskit backend. If None, all-to-all connectivity is assumed. If a `target_device` is specified, `target_device.operation_names` supercedes the `target_gateset`.
+        target_device (qiskit.transpiler.Target or qiskit.providers.Backend): (optional)
+            The target device to compile the circuit for. Can be specified as a Qiskit Target object or a Qiskit backend (in which case backend.target will be used). If None, all-to-all connectivity is assumed. If a `target_device` is specified, its operation_names supercedes the `target_gateset`.
         custom_passes (list[qiskit.transpiler.TransformationPass]): (optional)
             A list of custom passes to apply after the default set
             of passes. Defaults to None.
@@ -55,12 +55,20 @@ def compile(
     if return_format == "original":
         return_format = get_program_type_alias(circuit)
 
+    # Handle target_device: if it's a backend, extract its target
+    if target_device is not None and hasattr(target_device, 'target'):
+        # If target_device is a backend, use its target
+        actual_target_device = target_device.target
+    else:
+        # If target_device is already a Target or None
+        actual_target_device = target_device
+
     # Translate to Qiskit Circuit object
     qiskit_circuit = translate(circuit, "qiskit")
 
     # Initialize the UCCDefault1 compiler with the target device and gateset
     ucc_default1 = UCCDefault1(
-        target_device=target_device, target_gateset=target_gateset
+        target_device=actual_target_device, target_gateset=target_gateset
     )
 
     # Translate into the target device gateset first; no optimization

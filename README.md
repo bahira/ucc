@@ -8,6 +8,10 @@
 [![Documentation Status](https://readthedocs.org/projects/ucc/badge/?version=latest)](https://ucc.readthedocs.io/en/latest/?badge=latest)
 [![codecov](https://codecov.io/gh/unitaryfoundation/ucc/branch/main/graph/badge.svg)](https://codecov.io/gh/unitaryfoundation/ucc)
 [![Discord Chat](https://img.shields.io/badge/dynamic/json?color=blue&label=Discord&query=approximate_presence_count&suffix=%20online.&url=https%3A%2F%2Fdiscord.com%2Fapi%2Finvites%2FJqVGmpkP96%3Fwith_counts%3Dtrue)](http://discord.unitary.foundation)
+[![CI](https://img.shields.io/github/actions/workflow/status/unitaryfoundation/ucc/test.yml?branch=main&label=CI)](https://github.com/unitaryfoundation/ucc/actions/workflows/test.yml)
+[![Python Version](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/)
+[![Last Commit](https://img.shields.io/github/last-commit/unitaryfoundation/ucc)](https://github.com/unitaryfoundation/ucc/commits/main)
+[![Contributors](https://img.shields.io/github/contributors/unitaryfoundation/ucc)](https://github.com/unitaryfoundation/ucc/graphs/contributors)
 
 The **Unitary Compiler Collection (UCC)** is a Python library for frontend-agnostic, high performance compilation of quantum circuits. UCC's goal is to gather together the best of open source compilation to make quantum programming simpler, faster, and more scalable.
 
@@ -21,6 +25,7 @@ Check out our [open issues tagged with #merit-bounty](https://github.com/unitary
 | Resource | Description |
 |----------|-------------|
 | Documentation | Check out our [documentation](https://ucc.readthedocs.io/en/latest/), which you can build locally after installation by running `make html` in `ucc/docs/source`. |
+| Getting Started Notebook | Try our [Jupyter notebook](notebooks/getting_started_with_ucc.ipynb) that demonstrates UCC optimization for fake quantum devices with performance comparisons. |
 | Introductory Video | Watch our [introductory video](https://www.youtube.com/watch?v=11uQynyOUI8) on UCC presented at [FOSDEM 2025](https://fosdem.org/2025/) by [@natestemen](https://github.com/natestemen/). |
 | Launch Announcement | Read the [launch announcement](https://unitary.foundation/posts/2025_ucc_launch_blog) to learn more on the current state of UCC, its capabilities and future direction. |
 | Discussions | For code, repo, or theory questions, especially those requiring more detailed responses, submit a [Discussion](https://github.com/unitaryfoundation/ucc/discussions). |
